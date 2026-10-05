@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBCare Kenali TBC, Lindungi Diri</title>
+  <meta name="description" content="Edukasi TBC (Tuberkulosis): kenali gejala, penularan, pencegahan, dan pengobatan." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%2314a89e%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%2307665f%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22url%28%23g%29%22/%3E%3Cg%20transform=%22translate%2813%2013%29%20scale%281.58%29%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%222.6%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M12%204v8M10%208c-2-1-3-3-3-3-2%202-3%205-3%209%200%203%201%205%204%205%202%200%203-2%203-5V8M14%208c2-1%203-3%203-3%202%202%203%205%203%209%200%203-1%205-4%205-2%200-3-2-3-5V8%22/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%2314a89e%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%2307665f%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22url%28%23g%29%22/%3E%3Cg%20transform=%22translate%2813%2013%29%20scale%281.58%29%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-width=%222.6%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M12%204v8M10%208c-2-1-3-3-3-3-2%202-3%205-3%209%200%203%201%205%204%205%202%200%203-2%203-5V8M14%208c2-1%203-3%203-3%202%202%203%205%203%209%200%203-1%205-4%205-2%200-3-2-3-5V8%22/%3E%3C/g%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#087f78" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" />
+  <style>
+  /* ===== Reset ===== */
+  /* Reset dasar (setara preflight Tailwind yang dipakai desain Figma Make) */
+  *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid currentColor; }
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+  a { color: inherit; text-decoration: inherit; }
+  button { color: inherit; background: transparent; font: inherit; cursor: pointer; }
+  ul { list-style: none; }
+  svg { display: block; }
+  small { font-size: 80%; }
+  strong { font-weight: bolder; }
+
+  /* ===== Design tokens ===== */
+  :root {
+    --ink: #123b3a;
+    --ink-soft: #4f6f6d;
+    --teal: #087f78;
+    --teal-dark: #07665f;
+    --teal-pale: #e4f5f1;
+    --mint: #bfe5d8;
+    --cream: #fbfaf5;
+    --white: #ffffff;
+    --line: #dbe9e5;
+    --coral: #ed7a62;
+    --coral-pale: #fff0eb;
+    --blue-pale: #edf4fa;
+    --yellow-pale: #fff8dc;
+    --danger: #b94f40;
+    --shadow: 0 20px 60px rgba(23, 75, 71, 0.1);
+    --shadow-small: 0 10px 30px rgba(23, 75, 71, 0.08);
+  }
+
+  /* ===== Base ===== */
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body { margin: 0; color: var(--ink); background: var(--cream); font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+  button:focus-visible { outline: 3px solid rgba(237, 122, 98, 0.5); outline-offset: 3px; }
+  h1, h2, h3, p { margin-top: 0; }
+  h1, h2, h3, .logo { font-family: "Manrope", sans-serif; }
+  .icon { display: block; flex: none; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+  .container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+  .section { padding: 112px 0; }
+  .eyebrow { display: inline-flex; align-items: center; margin-bottom: 16px; color: var(--teal); font-size: 13px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+  .eyebrow--light { color: #9ee0d5; }
+  .section-heading { max-width: 690px; margin-bottom: 48px; }
+  .section-heading h2, .treatment-intro h2, .quiz-welcome h2, .result-card h2, .review__heading h2 { margin-bottom: 18px; font-size: clamp(32px, 4vw, 48px); line-height: 1.12; letter-spacing: -0.035em; }
+  .section-heading p, .treatment-intro p, .quiz-welcome p, .review__heading p { margin: 0; color: var(--ink-soft); font-size: 18px; line-height: 1.75; }
+  /* ===== Tombol ===== */
+  .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 10px; padding: 0 22px; border: 1px solid transparent; border-radius: 14px; cursor: pointer; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s; }
+  .button:hover:not(:disabled) { transform: translateY(-2px); }
+  .button:disabled { opacity: .42; cursor: not-allowed; }
+  .button--primary { color: var(--white); background: var(--teal); box-shadow: 0 8px 20px rgba(8,127,120,.2); }
+  .button--primary:hover:not(:disabled) { background: var(--teal-dark); box-shadow: 0 12px 25px rgba(8,127,120,.26); }
+  .button--secondary { color: var(--ink); border-color: var(--line); background: var(--white); }
+  .button--ghost { color: var(--teal); background: transparent; }
+
+  /* ===== Navbar ===== */
+  .navbar { position: sticky; z-index: 50; top: 0; border-bottom: 1px solid rgba(219,233,229,.8); background: rgba(251,250,245,.92); backdrop-filter: blur(18px); }
+  .navbar__inner { display: flex; height: 78px; align-items: center; gap: 24px; }
+  .logo { display: flex; align-items: center; color: var(--ink); font-size: 22px; font-weight: 800; letter-spacing: -.04em; }
+  .logo > span:last-child > span { color: var(--teal); }
+  .logo__mark { display: grid; width: 38px; height: 38px; margin-right: 9px; place-items: center; color: var(--white); border-radius: 12px; background: var(--teal); }
+  .logo--light { color: var(--white); }
+  .logo--light > span:last-child > span { color: #9ee0d5; }
+  .nav-links { display: flex; flex: 1; align-items: center; justify-content: center; gap: 2px; }
+  .nav-links a { display: block; padding: 9px 10px; color: var(--ink-soft); border-radius: 9px; font-size: 14px; font-weight: 600; }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--teal); background: var(--teal-pale); }
+  .navbar .button { min-height: 43px; padding: 0 17px; border-radius: 12px; font-size: 14px; }
+  .menu-button { display: none; padding: 8px; color: var(--ink); border: 0; background: none; }
+
+  /* ===== Hero ===== */
+  .hero { position: relative; overflow: hidden; padding: 72px 0 94px; }
+  .hero::before { position: absolute; top: -180px; right: -160px; width: 680px; height: 680px; border-radius: 50%; background: #edf7f3; content: ""; }
+  .hero__grid { position: relative; display: grid; align-items: center; grid-template-columns: .95fr 1.05fr; gap: 70px; }
+  .hero__content { padding: 38px 0; }
+  .hero__kicker { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 24px; color: var(--teal-dark); font-size: 14px; font-weight: 700; }
+  .hero__kicker span { display: grid; width: 28px; height: 28px; place-items: center; color: var(--teal); border-radius: 50%; background: var(--teal-pale); }
+  .hero h1 { margin-bottom: 25px; font-size: clamp(48px, 6vw, 74px); line-height: 1.04; letter-spacing: -.06em; }
+  .hero h1 em { color: var(--teal); font-style: normal; }
+  .hero__content > p { max-width: 590px; margin-bottom: 32px; color: var(--ink-soft); font-size: 19px; line-height: 1.75; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero__trust { display: flex; align-items: center; margin-top: 36px; }
+  .avatar-stack { display: flex; margin-right: 14px; }
+  .avatar-stack span { display: grid; width: 34px; height: 34px; margin-left: -7px; place-items: center; color: var(--teal-dark); border: 3px solid var(--cream); border-radius: 50%; background: var(--mint); font-size: 11px; font-weight: 800; }
+  .avatar-stack span:first-child { margin-left: 0; background: #f8d8c9; }
+  .avatar-stack span:last-child { background: #d8e5f2; }
+  .hero__trust p { display: flex; margin: 0; flex-direction: column; font-size: 13px; }
+  .hero__trust small { margin-top: 2px; color: var(--ink-soft); font-size: 12px; }
+  .hero-art { position: relative; min-height: 550px; }
+  .hero-art > svg { width: 100%; height: 100%; }
+  .art-blob { fill: #d9eee7; }
+  .art-circle { fill: var(--coral); opacity: .8; }
+  .art-stem, .art-detail { fill: none; stroke: var(--teal-dark); stroke-linecap: round; stroke-linejoin: round; }
+  .art-stem { stroke-width: 15; }
+  .art-lung { stroke: #087f78; stroke-width: 3; }
+  .art-lung--left { fill: #f7a28f; }
+  .art-lung--right { fill: #efa187; }
+  .art-detail { stroke-width: 5; opacity: .45; }
+  .art-eye { fill: var(--ink); }
+  .art-smile { fill: none; stroke: var(--ink); stroke-linecap: round; stroke-width: 4; }
+  .art-leaf { fill: #88cbb8; }
+  .art-leaf--2 { fill: #a9d9cc; }
+  .hero-art__badge, .hero-art__tip { position: absolute; z-index: 2; display: flex; align-items: center; border: 1px solid rgba(255,255,255,.8); background: rgba(255,255,255,.92); box-shadow: var(--shadow-small); backdrop-filter: blur(8px); }
+  .hero-art__badge { top: 40px; right: 2px; gap: 10px; padding: 13px 17px; border-radius: 16px; color: var(--teal); }
+  .hero-art__badge span { color: var(--ink); font-size: 13px; font-weight: 700; line-height: 1.25; }
+  .hero-art__tip { bottom: 46px; left: -6px; gap: 12px; padding: 12px 18px 12px 12px; border-radius: 16px; }
+  .hero-art__tip > span { display: grid; width: 40px; height: 40px; place-items: center; color: var(--teal); border-radius: 11px; background: var(--teal-pale); }
+  .hero-art__tip div { display: flex; flex-direction: column; font-size: 13px; }
+  .hero-art__tip small { color: var(--ink-soft); }
+
+  /* ===== Kenapa kita perlu mengenal TBC ===== */
+  .learn { background: var(--white); }
+  .learn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .learn-card { min-height: 285px; padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); transition: transform .2s, box-shadow .2s, border .2s; }
+  .learn-card:hover { transform: translateY(-5px); border-color: var(--mint); box-shadow: var(--shadow-small); }
+  .learn-card__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 35px; }
+  .icon-box { display: grid; width: 50px; height: 50px; place-items: center; color: var(--teal); border-radius: 15px; background: var(--teal-pale); }
+  .icon-box--blue { color: #4b7da4; background: var(--blue-pale); }
+  .icon-box--orange { color: #bd634f; background: var(--coral-pale); }
+  .card-number { color: #a6bab7; font-family: "Manrope"; font-size: 13px; font-weight: 800; }
+  .learn-card h3, .symptom-card h3, .prevention-card h3 { margin-bottom: 10px; font-size: 18px; }
+  .learn-card p, .symptom-card p, .prevention-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.65; }
+  .learn-card a { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; color: var(--teal); font-weight: 700; }
+
+  /* ===== Tentang TBC ===== */
+  .about { background: #f1f8f5; }
+  .about-layout { display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; }
+  .about-feature { position: relative; overflow: hidden; padding: 42px; color: var(--white); border-radius: 26px; background: var(--teal-dark); }
+  .about-feature::after { position: absolute; right: -60px; bottom: -90px; width: 260px; height: 260px; border: 40px solid rgba(255,255,255,.06); border-radius: 50%; content: ""; }
+  .feature-tag { display: inline-flex; padding: 7px 11px; color: #bde9de; border: 1px solid rgba(255,255,255,.2); border-radius: 100px; font-size: 12px; font-weight: 700; }
+  .about-feature h3 { max-width: 440px; margin: 25px 0 18px; font-size: 30px; line-height: 1.2; }
+  .about-feature > p { max-width: 550px; color: #d3ebe5; font-size: 16px; line-height: 1.75; }
+  .micro-fact { position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 12px; margin-top: 35px; padding: 16px; color: var(--ink); border-radius: 14px; background: #dff3ed; font-size: 13px; line-height: 1.5; }
+  .micro-fact .icon { margin-top: 2px; color: var(--teal); }
+  .micro-fact span { display: flex; flex-direction: column; }
+  .about-cards { display: flex; flex-direction: column; gap: 15px; }
+  .about-cards article { display: flex; flex: 1; align-items: center; gap: 20px; padding: 23px 26px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+  .about-cards h3 { margin-bottom: 6px; font-size: 17px; }
+  .about-cards p { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.55; }
+
+  /* ===== Gejala ===== */
+  .symptoms { background: var(--white); }
+  .split-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 60px; margin-bottom: 45px; }
+  .split-heading .section-heading { margin-bottom: 0; }
+  .side-note { display: flex; max-width: 360px; align-items: flex-start; gap: 13px; padding: 18px; border-radius: 15px; background: var(--yellow-pale); }
+  .side-note > span { display: grid; width: 25px; height: 25px; flex: none; place-items: center; color: #7c681f; border: 1px solid #d9c462; border-radius: 50%; font-weight: 800; }
+  .side-note p { margin: 0; color: #6e622f; font-size: 13px; line-height: 1.55; }
+  .symptom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .symptom-card { padding: 27px; border: 1px solid var(--line); border-radius: 19px; }
+  .symptom-icon { display: grid; width: 48px; height: 48px; margin-bottom: 24px; place-items: center; color: #b15949; border-radius: 14px; background: var(--coral-pale); }
+  .symptom-icon--2, .symptom-icon--5 { color: var(--teal); background: var(--teal-pale); }
+  .symptom-icon--3, .symptom-icon--6 { color: #4b7197; background: var(--blue-pale); }
+  .care-alert { display: flex; align-items: center; gap: 20px; margin-top: 24px; padding: 24px 27px; border-radius: 19px; background: var(--teal-pale); }
+  .care-alert__icon { display: grid; width: 50px; height: 50px; flex: none; place-items: center; color: var(--white); border-radius: 14px; background: var(--teal); }
+  .care-alert div { flex: 1; }
+  .care-alert strong { display: block; margin-bottom: 5px; font-family: "Manrope"; }
+  .care-alert p { margin: 0; color: var(--ink-soft); font-size: 14px; }
+
+  /* ===== Penularan + mitos/fakta ===== */
+  .transmission { background: var(--cream); }
+  .air-flow { display: grid; align-items: center; margin-bottom: 25px; padding: 36px; border: 1px solid var(--line); border-radius: 26px; background: var(--white); grid-template-columns: 1fr .8fr 1fr 1fr; }
+  .air-person, .air-room { text-align: center; }
+  .air-person > span { display: grid; width: 90px; height: 90px; margin: 0 auto 18px; place-items: center; color: var(--teal); border-radius: 50%; background: var(--teal-pale); }
+  .air-person--source > span { color: var(--coral); background: var(--coral-pale); }
+  .air-flow h3 { margin-bottom: 6px; font-size: 15px; }
+  .air-flow p { margin: 0 auto; color: var(--ink-soft); font-size: 12px; line-height: 1.5; }
+  .air-path { position: relative; display: flex; height: 120px; align-items: center; justify-content: center; color: var(--teal); border-top: 2px dashed var(--mint); }
+  .air-path span { position: absolute; top: -6px; width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
+  .air-path span:nth-child(1) { left: 15%; }
+  .air-path span:nth-child(2) { left: 45%; width: 7px; height: 7px; }
+  .air-path span:nth-child(3) { left: 75%; }
+  .air-path .icon { margin-top: 15px; }
+  .air-path small { position: absolute; bottom: 8px; color: var(--ink-soft); font-size: 10px; }
+  .room-window { display: grid; width: 98px; height: 88px; margin: 0 auto 18px; padding: 8px; border: 6px solid #98c8bb; background: #eaf6f2; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .room-window i { background: #bde3da; }
+  .transmission-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .transmission-facts article { display: flex; gap: 16px; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); }
+  .transmission-facts article > span { display: grid; width: 43px; height: 43px; flex: none; place-items: center; color: var(--coral); border-radius: 12px; background: var(--coral-pale); }
+  .transmission-facts article:last-child > span { color: var(--teal); background: var(--teal-pale); }
+  .transmission-facts h3 { margin-bottom: 5px; font-size: 16px; }
+  .transmission-facts p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.55; }
+  .myth-section { display: grid; margin-top: 70px; grid-template-columns: .8fr 1.2fr; gap: 80px; }
+  .myth-heading h3 { margin-bottom: 12px; font-size: 34px; }
+  .myth-heading p { color: var(--ink-soft); }
+  .myth-list { display: flex; flex-direction: column; gap: 10px; }
+  .myth-card { display: grid; width: 100%; padding: 18px 20px; text-align: left; border: 1px solid var(--line); border-radius: 15px; background: var(--white); cursor: pointer; grid-template-columns: 63px 1fr 30px; gap: 15px; }
+  .myth-card--open { border-color: var(--mint); box-shadow: var(--shadow-small); }
+  .myth-label { align-self: center; padding: 5px 7px; color: var(--danger); border-radius: 7px; background: var(--coral-pale); font-size: 10px; font-weight: 800; text-align: center; letter-spacing: .07em; }
+  .myth-label--fact { color: var(--teal-dark); background: var(--teal-pale); }
+  .myth-statement { align-self: center; font-weight: 700; }
+  .myth-toggle { align-self: center; color: var(--teal); font-size: 24px; text-align: center; }
+  .myth-detail { padding-top: 14px; color: var(--ink-soft); border-top: 1px solid var(--line); font-size: 13px; line-height: 1.55; grid-column: 1 / -1; }
+
+  /* ===== Pencegahan ===== */
+  .prevention { background: #edf7f3; }
+  .prevention-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
+  .prevention-card { padding: 25px; border-radius: 19px; background: var(--white); box-shadow: 0 6px 0 rgba(8,127,120,.06); }
+  .prevention-visual { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; }
+  .prevention-visual > span { color: #b1c6c2; font-family: "Manrope"; font-size: 12px; font-weight: 800; }
+  .prevention-visual .icon { box-sizing: content-box; padding: 15px; color: var(--teal); border-radius: 16px; background: var(--teal-pale); }
+
+  /* ===== Pengobatan ===== */
+  .treatment { color: var(--white); background: var(--ink); }
+  .treatment-intro { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-bottom: 65px; }
+  .treatment-intro > div:first-child { max-width: 700px; }
+  .treatment-intro p { color: #bdd6d3; }
+  .treatment-stamp { display: flex; min-width: 230px; align-items: center; gap: 14px; padding: 18px; color: #9ee0d5; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgba(255,255,255,.05); }
+  .treatment-stamp span { display: flex; flex-direction: column; color: var(--white); }
+  .treatment-stamp small { margin-top: 3px; color: #a9c5c2; font-size: 11px; }
+  .timeline { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .timeline-step { position: relative; padding: 0 18px 35px 0; border-bottom: 2px solid rgba(255,255,255,.12); }
+  .timeline-step::after { position: absolute; right: -1px; bottom: -6px; width: 10px; height: 10px; border: 2px solid var(--ink); border-radius: 50%; background: #69c7b7; content: ""; }
+  .timeline-number { color: #77cfc0; font-family: "Manrope"; font-size: 12px; font-weight: 800; }
+  .timeline-icon { display: grid; width: 48px; height: 48px; margin: 18px 0 22px; place-items: center; color: #9ee0d5; border-radius: 14px; background: rgba(255,255,255,.08); }
+  .timeline-step h3 { margin-bottom: 9px; font-size: 15px; }
+  .timeline-step p { max-width: 170px; margin: 0; color: #9fbdb9; font-size: 12px; line-height: 1.55; }
+  .medicine-grid { display: grid; margin-top: 45px; grid-template-columns: .85fr 1.15fr; gap: 18px; }
+  .medicine-warning { display: flex; align-items: center; gap: 18px; padding: 28px; color: var(--coral-pale); border-radius: 20px; background: #a94f42; }
+  .medicine-warning div { display: flex; flex-direction: column; gap: 6px; }
+  .medicine-warning span { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .medicine-warning strong { font-family: "Manrope"; font-size: 18px; line-height: 1.4; }
+  .medicine-grid article { padding: 27px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(255,255,255,.05); }
+  .medicine-grid article h3 { margin-bottom: 8px; font-size: 18px; }
+  .medicine-grid article p { color: #adc8c5; font-size: 13px; line-height: 1.55; }
+  .medicine-grid ul { display: flex; margin: 18px 0 0; padding: 0; gap: 18px; list-style: none; }
+  .medicine-grid li { display: flex; align-items: center; gap: 6px; color: #d7ebe8; font-size: 12px; }
+  .medicine-grid li .icon { color: #75d0bf; }
+
+  /* ===== Kuis, hasil, pembahasan ===== */
+  .quiz { background: #f5f2e9; }
+  .quiz-welcome { display: grid; overflow: hidden; min-height: 500px; border-radius: 30px; background: var(--white); box-shadow: var(--shadow); grid-template-columns: 1.05fr .95fr; }
+  .quiz-welcome__content { align-self: center; padding: 65px; }
+  .quiz-welcome__content > p { max-width: 600px; }
+  .quiz-meta { display: flex; gap: 18px; margin: 27px 0; color: var(--ink-soft); font-size: 13px; }
+  .quiz-meta span { display: flex; align-items: center; gap: 7px; }
+  .quiz-meta .icon { color: var(--teal); }
+  .quiz-visual { position: relative; display: grid; overflow: hidden; place-items: center; background: var(--teal-pale); }
+  .quiz-visual::before, .quiz-visual::after { position: absolute; width: 230px; height: 230px; border: 50px solid rgba(8,127,120,.06); border-radius: 50%; content: ""; }
+  .quiz-visual::before { top: -90px; right: -80px; }
+  .quiz-visual::after { bottom: -110px; left: -100px; }
+  .quiz-visual__circle { position: relative; display: grid; width: 220px; height: 220px; place-items: center; color: var(--white); border: 16px solid rgba(255,255,255,.8); border-radius: 50%; background: var(--teal); box-shadow: var(--shadow); }
+  .quiz-visual__circle > span { font-family: "Manrope"; font-size: 100px; font-weight: 800; }
+  .quiz-visual__circle i { position: absolute; display: grid; width: 45px; height: 45px; place-items: center; color: var(--ink); border-radius: 13px; background: var(--white); box-shadow: var(--shadow-small); font-style: normal; font-weight: 800; }
+  .quiz-visual__circle i:nth-of-type(1) { top: -30px; left: 0; transform: rotate(-8deg); }
+  .quiz-visual__circle i:nth-of-type(2) { right: -35px; bottom: 30px; transform: rotate(8deg); }
+  .quiz-visual__circle i:nth-of-type(3) { bottom: -35px; left: 30px; transform: rotate(-5deg); }
+  .quiz-visual__card { position: absolute; right: 24px; bottom: 35px; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 14px; background: var(--white); box-shadow: var(--shadow-small); font-size: 12px; }
+  .quiz-visual__card .icon { color: var(--teal); }
+  .quiz-panel { max-width: 850px; margin: 0 auto; padding: 42px; border-radius: 26px; background: var(--white); box-shadow: var(--shadow); }
+  .quiz-panel__top { display: flex; align-items: flex-end; justify-content: space-between; }
+  .quiz-panel__top .eyebrow { margin-bottom: 7px; }
+  .quiz-panel__top h2 { margin: 0; font-size: 25px; }
+  .quiz-percent { color: var(--teal); font-family: "Manrope"; font-weight: 800; }
+  .progress { height: 7px; margin: 18px 0 35px; overflow: hidden; border-radius: 20px; background: var(--teal-pale); }
+  .progress span { display: block; height: 100%; border-radius: inherit; background: var(--teal); transition: width .3s; }
+  .question-card { padding: 35px; border: 1px solid var(--line); border-radius: 20px; }
+  .question-number { margin-bottom: 12px; color: var(--teal); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+  .question-card > h3 { margin-bottom: 27px; font-size: 24px; }
+  .answers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .answer { display: grid; min-height: 58px; align-items: center; padding: 9px 12px; color: var(--ink); text-align: left; border: 1px solid var(--line); border-radius: 13px; background: var(--white); cursor: pointer; grid-template-columns: 38px 1fr 24px; gap: 10px; }
+  .answer > span { display: grid; width: 34px; height: 34px; place-items: center; color: var(--ink-soft); border-radius: 9px; background: #f2f6f4; font-size: 12px; font-weight: 800; }
+  .answer i { display: grid; width: 21px; height: 21px; place-items: center; color: var(--white); border-radius: 50%; background: var(--teal); }
+  .answer--selected { border-color: var(--teal); background: var(--teal-pale); box-shadow: 0 0 0 1px var(--teal); }
+  .answer--selected > span { color: var(--white); background: var(--teal); }
+  .quiz-controls { display: flex; justify-content: space-between; margin-top: 25px; }
+  .result-card { max-width: 850px; margin: 0 auto; padding: 50px; text-align: center; border-radius: 28px; background: var(--white); box-shadow: var(--shadow); }
+  .result-badge { display: grid; width: 58px; height: 58px; margin: 0 auto 22px; place-items: center; color: var(--teal); border-radius: 18px; background: var(--teal-pale); transform: rotate(-5deg); }
+  .result-card h2 { margin-bottom: 25px; font-size: 34px; }
+  .score-ring { display: flex; width: 170px; height: 170px; margin: 0 auto 20px; align-items: baseline; justify-content: center; border: 13px solid var(--teal-pale); border-top-color: var(--teal); border-radius: 50%; transform: rotate(-20deg); }
+  .score-ring strong, .score-ring span { transform: rotate(20deg); }
+  .score-ring strong { font-family: "Manrope"; font-size: 58px; line-height: 145px; }
+  .score-ring span { margin-left: 4px; color: var(--ink-soft); font-size: 14px; }
+  .result-status { display: inline-flex; padding: 7px 14px; color: var(--teal-dark); border-radius: 20px; background: var(--teal-pale); font-weight: 800; }
+  .result-status--good { color: #7b6517; background: var(--yellow-pale); }
+  .result-status--retry { color: var(--danger); background: var(--coral-pale); }
+  .result-scale { display: grid; max-width: 620px; margin: 38px auto; grid-template-columns: repeat(3, 1fr); }
+  .result-scale span { position: relative; display: flex; padding-top: 20px; color: #8ba19e; border-top: 4px solid var(--line); flex-direction: column; font-size: 11px; }
+  .result-scale span i { position: absolute; top: -8px; left: calc(50% - 6px); width: 12px; height: 12px; border-radius: 50%; background: var(--line); }
+  .result-scale span.active { color: var(--teal); border-color: var(--teal); }
+  .result-scale span.active i { background: var(--teal); box-shadow: 0 0 0 5px var(--teal-pale); }
+  .result-scale strong { margin-bottom: 3px; font-size: 13px; }
+  .result-actions { display: flex; justify-content: center; gap: 10px; }
+  .review__heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+  .review__heading h2 { margin-bottom: 10px; }
+  .review-list { display: flex; flex-direction: column; gap: 14px; }
+  .review-card { padding: 26px; border: 1px solid var(--line); border-left: 5px solid var(--teal); border-radius: 16px; background: var(--white); }
+  .review-card--wrong { border-left-color: var(--coral); }
+  .review-status { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; color: var(--teal); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+  .review-card--wrong .review-status { color: var(--danger); }
+  .review-status span { display: grid; width: 28px; height: 28px; place-items: center; color: var(--white); border-radius: 50%; background: var(--teal); }
+  .review-card--wrong .review-status span { background: var(--coral); }
+  .review-card h3 { font-size: 18px; }
+  .review-answers { display: grid; margin: 17px 0; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .review-answers p { display: flex; margin: 0; padding: 13px; border-radius: 10px; background: #f4f7f6; flex-direction: column; font-size: 13px; }
+  .review-answers p:last-child { background: var(--teal-pale); }
+  .review-answers span { margin-bottom: 3px; color: var(--ink-soft); font-size: 10px; text-transform: uppercase; }
+  .review-explain { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
+
+  /* ===== Footer ===== */
+  .footer { padding: 70px 0 25px; color: var(--white); background: #0b302f; }
+  .footer__main { display: grid; padding-bottom: 45px; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 55px; }
+  .footer__brand p { max-width: 310px; margin-top: 20px; color: #9ebcba; font-size: 13px; line-height: 1.7; }
+  .footer h3 { margin-bottom: 18px; color: #cce0de; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+  .footer__links { display: flex; align-items: flex-start; flex-direction: column; gap: 10px; }
+  .footer__links a { color: #94b2af; font-size: 13px; }
+  .footer__links a:hover { color: var(--white); }
+  .footer__source a:hover { color: var(--white); }
+  .footer__source p { color: #94b2af; font-size: 13px; line-height: 1.6; }
+  .footer__notice { display: flex; align-items: center; gap: 9px; padding: 15px 18px; color: #bbd0ce; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; background: rgba(255,255,255,.04); font-size: 12px; }
+  .footer__notice .icon { color: #83d2c3; }
+  .footer__bottom { display: flex; justify-content: space-between; margin-top: 25px; color: #6f9692; font-size: 11px; }
+
+  @media (max-width: 1050px) {
+    .nav-links { gap: 0; }
+    .nav-links a { padding: 8px 6px; font-size: 12px; }
+    .hero__grid { gap: 20px; }
+    .learn-grid { grid-template-columns: 1fr 1fr; }
+    .air-flow { grid-template-columns: 1fr .7fr 1fr; }
+    .air-person:last-child { display: none; }
+    .timeline { grid-template-columns: repeat(3, 1fr); gap: 25px 0; }
+    .footer__main { grid-template-columns: 2fr 1fr 1fr; }
+    .footer__source { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 800px) {
+    .container { width: min(100% - 32px, 680px); }
+    .section { padding: 80px 0; }
+    .navbar__inner { height: 68px; }
+    .navbar .button { display: none; }
+    .menu-button { display: block; margin-left: auto; }
+    .nav-links { position: absolute; top: 68px; right: 16px; left: 16px; display: none; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
+    .nav-links--open { display: flex; align-items: stretch; flex-direction: column; }
+    .nav-links a { padding: 12px; text-align: left; font-size: 14px; }
+    .hero { padding: 35px 0 70px; }
+    .hero__grid { display: flex; flex-direction: column; }
+    .hero__content { padding-bottom: 0; }
+    .hero-art { width: min(100%, 540px); min-height: 470px; }
+    .about-layout, .medicine-grid, .quiz-welcome { grid-template-columns: 1fr; }
+    .about-feature { padding: 30px; }
+    .symptom-grid, .prevention-grid { grid-template-columns: 1fr 1fr; }
+    .split-heading, .treatment-intro, .review__heading { align-items: flex-start; flex-direction: column; }
+    .air-flow { grid-template-columns: 1fr 1fr; row-gap: 28px; }
+    .air-room { order: 3; grid-column: 1 / -1; }
+    .air-path { display: none; }
+    .air-person:last-child { display: block; }
+    .transmission-facts { grid-template-columns: 1fr; }
+    .myth-section { grid-template-columns: 1fr; gap: 25px; }
+    .timeline { grid-template-columns: 1fr; }
+    .timeline { position: relative; }
+    .timeline-step { display: block; min-height: 48px; padding: 2px 4px 36px 66px; border: 0; }
+    .timeline-step:last-child { padding-bottom: 0; }
+    /* garis penghubung: tersambung terus dari ikon ke ikon (tengah ikon -> tengah ikon berikutnya) */
+    .timeline-step::after { top: 24px; right: auto; bottom: -24px; left: 23px; width: 2px; height: auto; border: 0; border-radius: 0; background: rgba(158,224,213,.45); }
+    .timeline-step:last-child::after { display: none; }
+    /* ikon solid & berada di atas garis, jadi garis tampak keluar-masuk dari ikon */
+    .timeline-icon { position: absolute; top: 0; left: 0; z-index: 1; width: 48px; height: 48px; margin: 0; background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)), var(--ink); }
+    .timeline-number { display: none; }
+    .timeline-step h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.3; }
+    .timeline-step p { max-width: none; font-size: 13px; }
+    .medicine-grid ul { flex-direction: column; gap: 8px; }
+    .quiz-welcome__content { padding: 45px; }
+    .quiz-visual { min-height: 400px; }
+    .footer__main { grid-template-columns: 1fr 1fr; }
+    .footer__brand { grid-column: 1 / -1; }
+    .footer__source { grid-column: auto; }
+  }
+
+  @media (max-width: 560px) {
+    .container { width: min(100% - 24px, 500px); }
+    .section { padding: 66px 0; }
+    .section-heading { margin-bottom: 34px; }
+    .section-heading h2, .treatment-intro h2, .quiz-welcome h2, .review__heading h2 { font-size: 32px; }
+    .section-heading p, .treatment-intro p, .quiz-welcome p, .review__heading p { font-size: 16px; }
+    .hero h1 { font-size: 46px; }
+    .hero__content > p { font-size: 17px; }
+    .hero__actions .button { width: 100%; }
+    .hero-art { min-height: 390px; }
+    .hero-art__badge { top: 20px; right: 0; }
+    .hero-art__tip { bottom: 25px; left: 0; }
+    .learn-grid, .symptom-grid, .prevention-grid { grid-template-columns: 1fr; }
+    .learn-card { min-height: auto; }
+    .learn-card__top { margin-bottom: 22px; }
+    .about-feature { padding: 26px; }
+    .about-feature h3 { font-size: 25px; }
+    .about-cards article { align-items: flex-start; padding: 20px; }
+    .side-note { max-width: none; }
+    .care-alert { align-items: flex-start; flex-wrap: wrap; }
+    .care-alert .button { width: 100%; }
+    .air-flow { padding: 24px 15px; gap: 10px; }
+    .air-person > span { width: 70px; height: 70px; }
+    .air-room { display: none; }
+    .myth-card { grid-template-columns: 58px 1fr 20px; gap: 10px; }
+    .treatment-stamp { min-width: 100%; }
+    .medicine-warning { align-items: flex-start; padding: 22px; }
+    .quiz-welcome__content { padding: 32px 25px; }
+    .quiz-visual { min-height: 350px; }
+    .quiz-visual__circle { width: 180px; height: 180px; }
+    .quiz-visual__circle > span { font-size: 80px; }
+    .quiz-panel, .result-card { padding: 25px 18px; border-radius: 20px; }
+    .question-card { padding: 22px 15px; }
+    .question-card > h3 { font-size: 20px; }
+    .answers { grid-template-columns: 1fr; }
+    .quiz-controls { gap: 8px; }
+    .quiz-controls .button { flex: 1; padding: 0 12px; }
+    .result-card h2 { font-size: 28px; }
+    .result-scale { gap: 4px; }
+    .result-actions { align-items: stretch; flex-direction: column; }
+    .review__heading .button { width: 100%; }
+    .review-answers { grid-template-columns: 1fr; }
+    .footer__main { grid-template-columns: 1fr 1fr; gap: 35px 20px; }
+    .footer__source { grid-column: 1 / -1; }
+    .footer__bottom { gap: 10px; flex-direction: column; }
+  }
+
+  /* ===== Aksesibilitas ===== */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; }
+  }
+
+  /* ===== Utilitas ===== */
+  [hidden] { display: none !important; }
+  .to-top { position: fixed; z-index: 40; right: 22px; bottom: 22px; display: grid; width: 46px; height: 46px; place-items: center; color: var(--white); border-radius: 14px; background: var(--teal); box-shadow: 0 10px 25px rgba(8,127,120,.3); transition: transform .2s, background .2s; }
+  .to-top:hover { background: var(--teal-dark); transform: translateY(-2px); }
+  .to-top .icon { transform: rotate(-90deg); }
+  .result-count { margin-top: 16px; color: var(--ink-soft); font-size: 14px; }
+  .result-count strong { color: var(--ink); }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sprite ikon: dipakai dengan <svg class="icon"><use href="#i-nama" /></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-air" viewBox="0 0 24 24"><path d="M4 8h9c3 0 3-4 0-4-1.2 0-2 .6-2.4 1.4M4 12h14c3 0 3 4 0 4-1.2 0-2-.6-2.4-1.4M4 16h5" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4.5V3h6v1.5M9 10h6M9 14h6M9 18h4" /></symbol>
+    <symbol id="i-cough" viewBox="0 0 24 24"><path d="M5 15c2.5 0 3.5-1.5 4-4 .8-3.6 3-5 6-5 2.5 0 4 1.7 4 4.2 0 3.8-3 6.8-6.8 6.8H9" /><path d="M5 12 2 10M5 16l-3 1M6 19l-2 2" /></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11Z" /></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" /><circle cx="12" cy="12" r="2.5" /></symbol>
+    <symbol id="i-food" viewBox="0 0 24 24"><path d="M7 3v7M4 3v4c0 2 1 3 3 3s3-1 3-3V3M7 10v11M17 3v18M17 3c-3 2-4 6-4 9h4" /></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.7c-2-2-5.2-2-7.2 0L12 7.3l-1.6-1.6a5.1 5.1 0 0 0-7.2 7.2L12 21l8.8-8.1a5.1 5.1 0 0 0 0-7.2Z" /></symbol>
+    <symbol id="i-lungs" viewBox="0 0 24 24"><path d="M12 4v8M10 8c-2-1-3-3-3-3-2 2-3 5-3 9 0 3 1 5 4 5 2 0 3-2 3-5V8M14 8c2-1 3-3 3-3 2 2 3 5 3 9 0 3-1 5-4 5-2 0-3-2-3-5V8" /></symbol>
+    <symbol id="i-mask" viewBox="0 0 24 24"><path d="M3 8c4 2 14 2 18 0v8c-5 4-13 4-18 0V8Z" /><path d="M3 10C0 9 1 15 3 14M21 10c3-1 2 5 0 4M8 12h8M8 15h8" /></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8 8 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z" /></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><path d="M3 20v-2c0-3 2.5-5 6-5s6 2 6 5v2M16 5.5a3 3 0 0 1 0 5M17 13c2.5.4 4 2.1 4 4.5V20" /></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M6 20h12M12 4v16M5 7h14M5 7l-3 6h6L5 7ZM19 7l-3 6h6l-3-6Z" /></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-3Z" /></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.4 5.6L19 10l-5.6 1.4L12 17l-1.4-5.6L5 10l5.6-1.4L12 3ZM19 17l.5 2 2 .5-2 .5-.5 2-.5-2-2-.5 2-.5.5-2Z" /></symbol>
+    <symbol id="i-thermometer" viewBox="0 0 24 24"><path d="M14 14.8V5a4 4 0 0 0-8 0v9.8a5 5 0 1 0 8 0Z" /><path d="M10 8v8" /></symbol>
+    <symbol id="i-vaccine" viewBox="0 0 24 24"><path d="m14 4 6 6M16 2l6 6M5 13l6 6M12 6l6 6-7 7-6-6 7-7ZM4 20l3-3" /></symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19L12 3Z" /><path d="M12 9v5M12 17.5v.2" /></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
+  </svg>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#beranda" aria-label="Kembali ke beranda">
+        <div class="logo"><span class="logo__mark"><svg class="icon" width="22" height="22" aria-hidden="true"><use href="#i-lungs" /></svg></span><span>TBC<span>are</span></span></div>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang TBC</a>
+        <a href="#gejala">Gejala</a>
+        <a href="#penularan">Penularan</a>
+        <a href="#pencegahan">Pencegahan</a>
+        <a href="#pengobatan">Pengobatan</a>
+        <a href="#kuis">Kuis</a>
+      </nav>
+      <a class="button button--primary" href="#kuis">Mulai Kuis <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+      <button class="menu-button" id="menu-button" aria-label="Buka menu" aria-expanded="false"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-menu" /></svg></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ BERANDA ============ -->
+    <section class="hero" id="beranda">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__kicker"><span><svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-spark" /></svg></span> Edukasi TBC untuk semua</div>
+          <h1>Kenali TBC,<br /><em>Lindungi Diri</em></h1>
+          <p>TBC dapat dicegah dan diobati. Kenali gejalanya, pahami cara penularannya, dan jangan ragu untuk mendapatkan pemeriksaan.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#tentang">Mulai Edukasi <svg class="icon" width="19" height="19" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="button button--secondary" href="#kuis">Ikuti Kuis</a>
+          </div>
+          <div class="hero__trust">
+            <div class="avatar-stack"><span>T</span><span>B</span><span>C</span></div>
+            <p><strong>Informasi ringkas &amp; tepercaya</strong><small>Mudah dipahami pelajar dan keluarga</small></p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Ilustrasi paru-paru sehat dan terlindungi">
+          <div class="hero-art__badge"><svg class="icon" width="22" height="22" aria-hidden="true"><use href="#i-shield" /></svg><span>TBC bisa<br />diobati</span></div>
+          <svg viewBox="0 0 520 450" role="img">
+            <path class="art-blob" d="M112 51c70-47 173-37 253 1 84 40 144 117 125 204-19 90-111 154-208 159-98 5-196-48-237-128C2 204 38 101 112 51Z" />
+            <circle class="art-circle" cx="87" cy="119" r="15" />
+            <path class="art-stem" d="M260 88v125" />
+            <path class="art-stem" d="m260 154-53 54M260 154l53 54" />
+            <path class="art-lung art-lung--left" d="M241 169c-24-14-37-48-57-49-31-2-69 72-72 131-3 56 25 90 72 82 42-8 57-45 57-91v-73Z" />
+            <path class="art-lung art-lung--right" d="M279 169c24-14 37-48 57-49 31-2 69 72 72 131 3 56-25 90-72 82-42-8-57-45-57-91v-73Z" />
+            <path class="art-detail" d="M224 206c-27 17-47 47-54 81M296 206c27 17 47 47 54 81" />
+            <path class="art-smile" d="M239 267c12 13 30 13 42 0" />
+            <circle class="art-eye" cx="231" cy="245" r="5" />
+            <circle class="art-eye" cx="289" cy="245" r="5" />
+            <path class="art-leaf" d="M77 323c40-4 64 15 65 53-38 5-62-14-65-53Z" />
+            <path class="art-leaf art-leaf--2" d="M443 100c-37-3-57 16-56 50 35 4 55-15 56-50Z" />
+          </svg>
+          <div class="hero-art__tip"><span><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-air" /></svg></span><div><strong>Udara segar</strong><small>Ventilasi membantu</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KENAPA PERLU MENGENAL TBC ============ -->
+    <section class="learn section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Mulai dari sini</span>
+          <h2>Kenapa kita perlu mengenal TBC?</h2>
+          <p>Pengetahuan yang benar membantu kita mengambil langkah yang tepat tanpa takut atau memberi stigma.</p>
+        </div>
+        <div class="learn-grid">
+          <article class="learn-card">
+            <div class="learn-card__top"><span class="icon-box"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-eye" /></svg></span><span class="card-number">01</span></div>
+            <h3>Kenali Gejalanya</h3>
+            <p>Batuk berkepanjangan dan keluhan lain perlu dikenali sejak dini.</p>
+            <a href="#gejala">Pelajari <svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__top"><span class="icon-box"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-air" /></svg></span><span class="card-number">02</span></div>
+            <h3>Pahami Penularannya</h3>
+            <p>TBC menyebar melalui udara dari orang yang sakit TBC paru.</p>
+            <a href="#penularan">Pelajari <svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__top"><span class="icon-box"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-shield" /></svg></span><span class="card-number">03</span></div>
+            <h3>Ketahui Cara Mencegah</h3>
+            <p>Kebiasaan sederhana dapat membantu mengurangi risiko penularan.</p>
+            <a href="#pencegahan">Pelajari <svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__top"><span class="icon-box"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-heart" /></svg></span><span class="card-number">04</span></div>
+            <h3>Tuntaskan Pengobatan</h3>
+            <p>TBC dapat sembuh bila obat diminum teratur sesuai anjuran.</p>
+            <a href="#pengobatan">Pelajari <svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TENTANG TBC ============ -->
+    <section class="about section" id="tentang">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Tentang TBC</span>
+          <h2>Mengenal TBC lebih dekat</h2>
+          <p>Memahami dasar-dasarnya adalah langkah pertama untuk melindungi diri dan orang di sekitar kita.</p>
+        </div>
+        <div class="about-layout">
+          <article class="about-feature">
+            <span class="feature-tag">Apa itu TBC?</span>
+            <h3>Penyakit menular yang dapat disembuhkan</h3>
+            <p>Tuberkulosis atau TBC adalah penyakit menular akibat infeksi bakteri <em>Mycobacterium tuberculosis</em>. TBC paling sering menyerang paru-paru, tetapi juga dapat mengenai organ lain.</p>
+            <div class="micro-fact"><svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-check" /></svg><span><strong>Penting diingat</strong> TBC bukan penyakit keturunan dan bukan akibat kutukan.</span></div>
+          </article>
+          <div class="about-cards">
+            <article><span class="icon-box"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-lungs" /></svg></span><div><h3>TBC paru</h3><p>Menyerang paru dan menjadi sumber utama penularan melalui udara.</p></div></article>
+            <article><span class="icon-box icon-box--blue"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-heart" /></svg></span><div><h3>TBC organ lain</h3><p>Dapat mengenai kelenjar getah bening, tulang, selaput otak, dan organ lainnya.</p></div></article>
+            <article><span class="icon-box icon-box--orange"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-spark" /></svg></span><div><h3>Penyebabnya bakteri</h3><p>Bukan virus atau jamur, melainkan bakteri yang membutuhkan pengobatan khusus.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GEJALA ============ -->
+    <section class="symptoms section" id="gejala">
+      <div class="container">
+        <div class="split-heading">
+          <div class="section-heading">
+            <span class="eyebrow">Waspadai tandanya</span>
+            <h2>Kenali gejala TBC</h2>
+            <p>Gejala dapat berbeda pada setiap orang. Perhatikan bila keluhan berlangsung lama atau semakin berat.</p>
+          </div>
+          <div class="side-note"><span>!</span><p>Gejala saja belum memastikan TBC. Diagnosis harus melalui pemeriksaan tenaga kesehatan.</p></div>
+        </div>
+        <div class="symptom-grid">
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--1"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-cough" /></svg></span>
+            <h3>Batuk berkepanjangan</h3>
+            <p>Batuk yang tidak kunjung membaik, dapat disertai dahak.</p>
+          </article>
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--2"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-thermometer" /></svg></span>
+            <h3>Demam</h3>
+            <p>Demam ringan yang berulang, terutama pada sore atau malam.</p>
+          </article>
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--3"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-moon" /></svg></span>
+            <h3>Berkeringat malam hari</h3>
+            <p>Berkeringat saat tidur meskipun udara tidak terasa panas.</p>
+          </article>
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--4"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-scale" /></svg></span>
+            <h3>Berat badan menurun</h3>
+            <p>Penurunan berat badan tanpa penyebab yang jelas.</p>
+          </article>
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--5"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-droplet" /></svg></span>
+            <h3>Mudah lelah</h3>
+            <p>Tubuh terasa lemah dan energi berkurang dalam beraktivitas.</p>
+          </article>
+          <article class="symptom-card">
+            <span class="symptom-icon symptom-icon--6"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-food" /></svg></span>
+            <h3>Nafsu makan menurun</h3>
+            <p>Keinginan untuk makan berkurang dalam waktu cukup lama.</p>
+          </article>
+        </div>
+        <div class="care-alert">
+          <span class="care-alert__icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-clipboard" /></svg></span>
+          <div><strong>Jangan abaikan gejala yang mengkhawatirkan</strong><p>Lakukan pemeriksaan di fasilitas pelayanan kesehatan agar mendapat penilaian dan penanganan yang tepat.</p></div>
+          <a class="button button--primary" href="#pengobatan">Lihat langkah pemeriksaan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENULARAN + MITOS/FAKTA ============ -->
+    <section class="transmission section" id="penularan">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Pahami penularannya</span>
+          <h2>Bagaimana TBC menular?</h2>
+          <p>TBC menular melalui udara, bukan karena berbagi makanan atau bersentuhan biasa.</p>
+        </div>
+
+        <div class="air-flow">
+          <div class="air-person air-person--source"><span><svg class="icon" width="36" height="36" aria-hidden="true"><use href="#i-cough" /></svg></span><h3>Pasien TBC paru</h3><p>Batuk, bersin, atau berbicara</p></div>
+          <div class="air-path"><span></span><span></span><span></span><svg class="icon" width="40" height="40" aria-hidden="true"><use href="#i-air" /></svg><small>Partikel di udara</small></div>
+          <div class="air-room"><div class="room-window"><i></i><i></i><i></i><i></i></div><h3>Ruang tertutup</h3><p>Risiko meningkat bila ventilasi buruk, padat, dan kontak berlangsung lama.</p></div>
+          <div class="air-person"><span><svg class="icon" width="36" height="36" aria-hidden="true"><use href="#i-people" /></svg></span><h3>Orang di sekitar</h3><p>Dapat menghirup udara yang mengandung bakteri</p></div>
+        </div>
+
+        <div class="transmission-facts">
+          <article><span><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-warning" /></svg></span><div><h3>Risiko lebih tinggi</h3><p>Kontak erat dalam waktu lama, ruangan padat, dan sirkulasi udara yang kurang baik.</p></div></article>
+          <article><span><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-check" /></svg></span><div><h3>Bukan cara utama</h3><p>Berjabat tangan, berbagi piring, atau menyentuh benda yang sama bukan cara utama penularan TBC.</p></div></article>
+        </div>
+
+        <div class="myth-section">
+          <div class="myth-heading">
+            <span class="eyebrow">Cek pemahaman</span>
+            <h3>Mitos atau fakta?</h3>
+            <p>Ketuk kartu untuk melihat penjelasannya.</p>
+          </div>
+          <div class="myth-list" id="myth-list">
+            <button class="myth-card myth-card--open" aria-expanded="true">
+              <span class="myth-label myth-label--fact">FAKTA</span>
+              <span class="myth-statement">TBC menyebar melalui udara.</span>
+              <span class="myth-toggle">−</span>
+              <span class="myth-detail">Percikan sangat kecil dapat berada di udara ketika pasien TBC paru batuk, bersin, atau berbicara.</span>
+            </button>
+            <button class="myth-card" aria-expanded="false">
+              <span class="myth-label">MITOS</span>
+              <span class="myth-statement">Berjabat tangan adalah cara utama penularan TBC.</span>
+              <span class="myth-toggle">+</span>
+              <span class="myth-detail" hidden>TBC bukan terutama menular lewat sentuhan, berbagi alat makan, atau berjabat tangan.</span>
+            </button>
+            <button class="myth-card" aria-expanded="false">
+              <span class="myth-label myth-label--fact">FAKTA</span>
+              <span class="myth-statement">TBC dapat disembuhkan dengan pengobatan yang tepat.</span>
+              <span class="myth-toggle">+</span>
+              <span class="myth-detail" hidden>Pasien perlu minum obat secara teratur dan menyelesaikan pengobatan sesuai arahan.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENCEGAHAN ============ -->
+    <section class="prevention section" id="pencegahan">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Langkah sederhana, dampak nyata</span>
+          <h2>Cegah penularan TBC</h2>
+          <p>Pencegahan dimulai dari kebiasaan sehat yang dapat dilakukan bersama di rumah, sekolah, dan tempat kerja.</p>
+        </div>
+        <div class="prevention-grid">
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>01</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-air" /></svg></div>
+            <h3>Buka akses udara</h3>
+            <p>Jaga ventilasi dan sirkulasi udara di ruang tempat tinggal, belajar, atau bekerja.</p>
+          </article>
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>02</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-cough" /></svg></div>
+            <h3>Terapkan etika batuk</h3>
+            <p>Tutup mulut dan hidung dengan siku bagian dalam atau tisu saat batuk dan bersin.</p>
+          </article>
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>03</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-mask" /></svg></div>
+            <h3>Gunakan masker</h3>
+            <p>Gunakan masker pada kondisi yang sesuai dan ikuti arahan tenaga kesehatan.</p>
+          </article>
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>04</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-clipboard" /></svg></div>
+            <h3>Periksa bila bergejala</h3>
+            <p>Jangan menunda pemeriksaan bila mengalami gejala yang mengarah ke TBC.</p>
+          </article>
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>05</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-heart" /></svg></div>
+            <h3>Ikuti anjuran medis</h3>
+            <p>Patuhi saran tenaga kesehatan, termasuk pemeriksaan kontak erat bila diperlukan.</p>
+          </article>
+          <article class="prevention-card">
+            <div class="prevention-visual"><span>06</span><svg class="icon" width="34" height="34" aria-hidden="true"><use href="#i-vaccine" /></svg></div>
+            <h3>Vaksinasi BCG</h3>
+            <p>Penuhi vaksinasi BCG sesuai program dan anjuran untuk perlindungan pada anak.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PENGOBATAN ============ -->
+    <section class="treatment section" id="pengobatan">
+      <div class="container">
+        <div class="treatment-intro">
+          <div>
+            <span class="eyebrow eyebrow--light">Ada harapan</span>
+            <h2>TBC dapat diobati</h2>
+            <p>Dengan diagnosis yang tepat, obat yang sesuai, dan kedisiplinan, pasien TBC dapat sembuh dan kembali beraktivitas.</p>
+          </div>
+          <div class="treatment-stamp"><svg class="icon" width="30" height="30" aria-hidden="true"><use href="#i-heart" /></svg><span><strong>Bisa sembuh</strong><small>dengan pengobatan tuntas</small></span></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-step">
+            <span class="timeline-number">1</span>
+            <span class="timeline-icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-eye" /></svg></span>
+            <h3>Kenali gejala</h3>
+            <p>Perhatikan batuk lama dan gejala penyerta.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">2</span>
+            <span class="timeline-icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-clipboard" /></svg></span>
+            <h3>Lakukan pemeriksaan</h3>
+            <p>Datang ke fasilitas pelayanan kesehatan.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">3</span>
+            <span class="timeline-icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-lungs" /></svg></span>
+            <h3>Dapatkan diagnosis</h3>
+            <p>Ikuti pemeriksaan yang disarankan petugas.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">4</span>
+            <span class="timeline-icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-vaccine" /></svg></span>
+            <h3>Mulai pengobatan</h3>
+            <p>Minum obat teratur sesuai jadwal.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-number">5</span>
+            <span class="timeline-icon"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-check" /></svg></span>
+            <h3>Tuntaskan pengobatan</h3>
+            <p>Jangan berhenti meski sudah merasa sehat.</p>
+          </div>
+        </div>
+        <div class="medicine-grid">
+          <div class="medicine-warning"><svg class="icon" width="30" height="30" aria-hidden="true"><use href="#i-warning" /></svg><div><span>Penting</span><strong>Jangan menghentikan pengobatan tanpa arahan tenaga kesehatan.</strong></div></div>
+          <article>
+            <h3>Mengapa harus diselesaikan?</h3>
+            <p>Pengobatan yang terputus dapat membuat bakteri tetap hidup, penyakit kembali, dan meningkatkan risiko kebal obat.</p>
+            <ul>
+              <li><svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-check" /></svg> Mengoptimalkan peluang sembuh</li>
+              <li><svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-check" /></svg> Mengurangi risiko penularan</li>
+              <li><svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-check" /></svg> Mencegah TBC kebal obat</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KUIS (awal, soal, hasil, pembahasan) ============ -->
+    <section class="quiz section" id="kuis">
+      <div class="container">
+
+        <div class="quiz-welcome" id="quiz-welcome">
+          <div class="quiz-welcome__content">
+            <span class="eyebrow">Akhiri dengan tantangan</span>
+            <h2>Seberapa baik pemahamanmu tentang TBC?</h2>
+            <p>Uji pemahamanmu setelah mempelajari materi tentang TBC. Hanya perlu beberapa menit.</p>
+            <div class="quiz-meta"><span><svg class="icon" width="19" height="19" aria-hidden="true"><use href="#i-clipboard" /></svg> 10 pertanyaan</span><span><svg class="icon" width="19" height="19" aria-hidden="true"><use href="#i-spark" /></svg> Hasil langsung</span></div>
+            <button class="button button--primary" id="quiz-start">Mulai Kuis <svg class="icon" width="19" height="19" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+          </div>
+          <div class="quiz-visual">
+            <div class="quiz-visual__circle"><span>?</span><i>A</i><i>B</i><i>C</i></div>
+            <div class="quiz-visual__card"><svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-check" /></svg><span>Siap<br /><strong>belajar?</strong></span></div>
+          </div>
+        </div>
+
+        <div class="quiz-panel" id="quiz-panel" hidden>
+          <div class="quiz-panel__top">
+            <div><span class="eyebrow">Kuis TBCare</span><h2 id="quiz-title"></h2></div>
+            <span class="quiz-percent" id="quiz-percent"></span>
+          </div>
+          <div class="progress" id="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"><span id="quiz-bar"></span></div>
+          <div class="question-card">
+            <p class="question-number" id="quiz-number"></p>
+            <h3 id="quiz-question"></h3>
+            <div class="answers" id="quiz-answers"></div>
+          </div>
+          <div class="quiz-controls">
+            <button class="button button--secondary" id="quiz-prev">Sebelumnya</button>
+            <button class="button button--primary" id="quiz-next">Berikutnya</button>
+          </div>
+        </div>
+
+        <div id="quiz-result" hidden></div>
+        <div id="quiz-review" hidden></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="logo logo--light"><span class="logo__mark"><svg class="icon" width="22" height="22" aria-hidden="true"><use href="#i-lungs" /></svg></span><span>TBC<span>are</span></span></div>
+          <p>Ruang belajar yang membantu semua orang memahami TBC dengan cara yang sederhana dan ramah.</p>
+        </div>
+        <div class="footer__links">
+          <h3>Jelajahi</h3>
+          <a href="#tentang">Tentang TBC</a><a href="#gejala">Gejala</a><a href="#penularan">Penularan</a><a href="#pencegahan">Pencegahan</a>
+        </div>
+        <div class="footer__links">
+          <h3>Materi</h3>
+          <a href="#pengobatan">Pengobatan</a><a href="#kuis">Kuis</a><a href="#gejala">Kenali Gejala</a>
+        </div>
+        <div class="footer__source">
+          <h3>Sumber informasi</h3>
+          <p><a href="https://www.kemkes.go.id" target="_blank" rel="noopener">Kementerian Kesehatan<br />Republik Indonesia</a></p>
+          <p><a href="https://www.who.int/health-topics/tuberculosis" target="_blank" rel="noopener">World Health Organization<br />(WHO)</a></p>
+        </div>
+      </div>
+      <div class="footer__notice"><svg class="icon" width="17" height="17" aria-hidden="true"><use href="#i-heart" /></svg><span>Website ini dibuat untuk tujuan edukasi dan bukan pengganti konsultasi atau pemeriksaan oleh tenaga kesehatan.</span></div>
+      <div class="footer__bottom"><span>© 2025 TBCare. Dibuat untuk edukasi kesehatan.</span><span>Kenali TBC · Lindungi Diri</span></div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="Kembali ke atas" hidden><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+
+  <script>
+    "use strict";
+
+    /* ===== Data kuis: 10 soal, 1 jawaban benar = 10 poin ===== */
+    const POINTS = 10;
+    const QUESTIONS = [
+      { q: "TBC disebabkan oleh apa?", options: ["Virus", "Bakteri", "Jamur", "Parasit"], answer: 1, explain: "TBC disebabkan oleh bakteri Mycobacterium tuberculosis." },
+      { q: "Bagaimana cara utama TBC paru menular?", options: ["Melalui udara", "Berjabat tangan", "Berbagi makanan", "Gigitan nyamuk"], answer: 0, explain: "Kuman TBC dapat menyebar di udara saat pasien TBC paru batuk, bersin, atau berbicara." },
+      { q: "Apa yang sebaiknya dilakukan jika mengalami gejala TBC?", options: ["Menunggu sendiri", "Minum obat bebas", "Periksa ke fasilitas kesehatan", "Menghindari makan"], answer: 2, explain: "Pemeriksaan di fasilitas kesehatan diperlukan untuk mendapatkan diagnosis dan penanganan yang tepat." },
+      { q: "Manakah kebiasaan yang membantu mencegah penularan?", options: ["Menutup semua jendela", "Menjaga ventilasi", "Berbagi masker", "Menghentikan obat"], answer: 1, explain: "Ventilasi dan sirkulasi udara yang baik membantu mengurangi risiko penularan di ruang tertutup." },
+      { q: "Kapan pengobatan TBC boleh dihentikan?", options: ["Saat merasa sehat", "Setelah satu minggu", "Sesuai arahan tenaga kesehatan", "Saat bosan"], answer: 2, explain: "Pengobatan harus diselesaikan sesuai anjuran tenaga kesehatan meskipun gejala sudah membaik." },
+      { q: "Organ tubuh mana yang paling sering terkena TBC?", options: ["Paru-paru", "Kulit", "Mata", "Gigi"], answer: 0, explain: "TBC paling sering menyerang paru-paru, walaupun bakteri juga dapat mengenai organ tubuh lainnya." },
+      { q: "Manakah yang dapat menjadi gejala TBC?", options: ["Batuk berkepanjangan", "Kuku memanjang", "Rambut rontok sesaat", "Mata berkedip"], answer: 0, explain: "Batuk yang berlangsung lama merupakan salah satu gejala utama yang perlu diperiksakan." },
+      { q: "Apa fungsi vaksinasi BCG?", options: ["Mengobati semua batuk", "Membantu perlindungan pada anak", "Menggantikan pemeriksaan", "Menghentikan obat TBC"], answer: 1, explain: "Vaksinasi BCG diberikan sesuai program dan anjuran untuk membantu melindungi anak dari bentuk TBC berat." },
+      { q: "Manakah yang bukan cara utama penularan TBC?", options: ["Udara di ruang tertutup", "Percikan saat batuk", "Berjabat tangan", "Kontak erat dalam waktu lama"], answer: 2, explain: "Berjabat tangan atau menyentuh benda yang sama bukan cara utama penularan TBC." },
+      { q: "Mengapa pengobatan TBC harus dituntaskan?", options: ["Agar bakteri tidak kebal obat", "Agar boleh berbagi obat", "Agar tidak perlu kontrol", "Agar dosis bisa ditebak"], answer: 0, explain: "Pengobatan yang tuntas membantu penyembuhan dan menurunkan risiko TBC kebal obat." }
+    ];
+
+    /* ===== Helper ===== */
+    const $ = (id) => document.getElementById(id);
+    const icon = (name, size = 24) =>
+      `<svg class="icon" width="${size}" height="${size}" aria-hidden="true"><use href="#i-${name}" /></svg>`;
+
+    /* ===== Menu mobile ===== */
+    const menuButton = $("menu-button");
+    const navLinks = $("nav-links");
+
+    function setMenu(open) {
+      navLinks.classList.toggle("nav-links--open", open);
+      menuButton.setAttribute("aria-expanded", open);
+      menuButton.innerHTML = icon(open ? "x" : "menu");
+    }
+    menuButton.addEventListener("click", () => setMenu(!navLinks.classList.contains("nav-links--open")));
+    navLinks.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+
+    /* ===== Tombol kembali ke atas ===== */
+    const toTop = $("to-top");
+    window.addEventListener("scroll", () => { toTop.hidden = window.scrollY < 500; }, { passive: true });
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    /* ===== Mitos atau fakta: satu kartu terbuka dalam satu waktu ===== */
+    $("myth-list").addEventListener("click", (e) => {
+      const clicked = e.target.closest(".myth-card");
+      if (!clicked) return;
+      const willOpen = !clicked.classList.contains("myth-card--open");
+      document.querySelectorAll(".myth-card").forEach((card) => {
+        const open = card === clicked && willOpen;
+        card.classList.toggle("myth-card--open", open);
+        card.setAttribute("aria-expanded", open);
+        card.querySelector(".myth-detail").hidden = !open;
+        card.querySelector(".myth-toggle").textContent = open ? "−" : "+";
+      });
+    });
+
+    /* ===== Kuis ===== */
+    const views = {
+      welcome: $("quiz-welcome"),
+      panel: $("quiz-panel"),
+      result: $("quiz-result"),
+      review: $("quiz-review")
+    };
+    let answers = [];   // indeks jawaban pengguna per soal (null = belum dijawab)
+    let current = 0;    // soal yang sedang tampil
+
+    function showView(name) {
+      Object.entries(views).forEach(([key, el]) => { el.hidden = key !== name; });
+    }
+    function scrollToQuiz() {
+      $("kuis").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function startQuiz() {
+      answers = QUESTIONS.map(() => null);
+      current = 0;
+      showView("panel");
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const total = QUESTIONS.length;
+      const item = QUESTIONS[current];
+      const percent = Math.round(((current + 1) / total) * 100);
+
+      $("quiz-title").textContent = `Soal ${current + 1} dari ${total}`;
+      $("quiz-percent").textContent = `${percent}%`;
+      $("quiz-bar").style.width = `${percent}%`;
+      $("quiz-progress").setAttribute("aria-valuenow", percent);
+      $("quiz-number").textContent = `PERTANYAAN ${String(current + 1).padStart(2, "0")}`;
+      $("quiz-question").textContent = item.q;
+
+      $("quiz-answers").innerHTML = item.options.map((text, i) => {
+        const selected = answers[current] === i;
+        return `<button class="answer${selected ? " answer--selected" : ""}" data-index="${i}" aria-pressed="${selected}">
+          <span>${String.fromCharCode(65 + i)}</span>${text}<i>${selected ? icon("check", 16) : ""}</i>
+        </button>`;
+      }).join("");
+
+      const isLast = current === total - 1;
+      $("quiz-prev").disabled = current === 0;
+      $("quiz-next").disabled = answers[current] === null;   // validasi: wajib memilih dulu
+      $("quiz-next").innerHTML = `${isLast ? "Lihat Hasil" : "Berikutnya"} ${icon("arrow", 18)}`;
+    }
+
+    $("quiz-start").addEventListener("click", startQuiz);
+
+    $("quiz-answers").addEventListener("click", (e) => {
+      const button = e.target.closest(".answer");
+      if (!button) return;
+      answers[current] = Number(button.dataset.index);
+      renderQuestion();
+    });
+
+    $("quiz-prev").addEventListener("click", () => { current--; renderQuestion(); });
+    $("quiz-next").addEventListener("click", () => {
+      if (current < QUESTIONS.length - 1) {
+        current++;
+        renderQuestion();
+      } else {
+        renderResult();
+        showView("result");
+        scrollToQuiz();
+      }
+    });
+
+    /* ===== Hasil kuis ===== */
+    function getCategory(score) {
+      if (score >= 80) return { label: "Sangat Baik", css: "great", message: "Pemahaman kamu sudah baik!" };
+      if (score >= 60) return { label: "Cukup Baik", css: "good", message: "Sedikit lagi menuju pemahaman yang kuat." };
+      return { label: "Perlu Belajar Lagi", css: "retry", message: "Yuk, pelajari kembali materi pentingnya." };
+    }
+
+    function renderResult() {
+      const correct = answers.filter((a, i) => a === QUESTIONS[i].answer).length;
+      const wrong = QUESTIONS.length - correct;
+      const score = correct * POINTS;
+      const category = getCategory(score);
+      const active = (min, max) => (score >= min && score <= max ? "active" : "");
+
+      views.result.innerHTML = `
+        <div class="result-card">
+          <div class="result-badge">${icon("spark", 28)}</div>
+          <span class="eyebrow">Kuis selesai!</span>
+          <h2>${category.message}</h2>
+          <div class="score-ring"><strong>${score}</strong><span>/ 100</span></div>
+          <span class="result-status result-status--${category.css}">${category.label}</span>
+          <p class="result-count"><strong>${correct}</strong> jawaban benar · <strong>${wrong}</strong> jawaban salah</p>
+          <div class="result-scale">
+            <span class="${active(0, 59)}"><i></i><strong>0–59</strong>Perlu Belajar Lagi</span>
+            <span class="${active(60, 79)}"><i></i><strong>60–79</strong>Cukup Baik</span>
+            <span class="${active(80, 100)}"><i></i><strong>80–100</strong>Sangat Baik</span>
+          </div>
+          <div class="result-actions">
+            <button class="button button--primary" id="show-review">Lihat Pembahasan</button>
+            <button class="button button--secondary" id="retry-quiz">Ulangi Kuis</button>
+            <a class="button button--ghost" href="#tentang">Kembali ke Edukasi</a>
+          </div>
+        </div>`;
+
+      renderReview();
+    }
+
+    /* ===== Pembahasan tiap soal ===== */
+    function renderReview() {
+      const cards = QUESTIONS.map((item, i) => {
+        const ok = answers[i] === item.answer;
+        return `
+          <article class="review-card ${ok ? "review-card--correct" : "review-card--wrong"}">
+            <div class="review-status"><span>${icon(ok ? "check" : "x", 18)}</span>${ok ? "BENAR" : "PERLU DITINJAU"}</div>
+            <h3>${i + 1}. ${item.q}</h3>
+            <div class="review-answers">
+              <p><span>Jawabanmu</span><strong>${item.options[answers[i]]}</strong></p>
+              <p><span>Jawaban benar</span><strong>${item.options[item.answer]}</strong></p>
+            </div>
+            <p class="review-explain">${item.explain}</p>
+          </article>`;
+      }).join("");
+
+      views.review.innerHTML = `
+        <div class="review">
+          <div class="review__heading">
+            <div>
+              <span class="eyebrow">Pembahasan kuis</span>
+              <h2>Belajar dari setiap jawaban</h2>
+              <p>Tinjau kembali jawabanmu dan pahami penjelasan singkatnya.</p>
+            </div>
+            <button class="button button--secondary" id="hide-review">Kembali ke hasil</button>
+          </div>
+          <div class="review-list">${cards}</div>
+        </div>`;
+    }
+
+    // Tombol di dalam hasil/pembahasan dibuat ulang oleh JS, jadi pakai event delegation
+    $("kuis").addEventListener("click", (e) => {
+      const id = e.target.closest("button")?.id;
+      if (id === "show-review") { showView("review"); scrollToQuiz(); }
+      if (id === "hide-review") { showView("result"); scrollToQuiz(); }
+      if (id === "retry-quiz") { startQuiz(); scrollToQuiz(); }
+    });
+
+  </script>
+</body>
+</html>
